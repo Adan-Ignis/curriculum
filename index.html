@@ -6,23 +6,22 @@
 <title>CV - Ignacio Gomez Vazquez</title>
 <style>
   /* ============================================================
-     CV de Ignacio Gómez Vázquez
-     Generado con la skill cv-optimization (software-development)
-     Verificado con scripts/verify-ats.mjs
-
-     Versión presentable. Los datos no confirmados se han redactado
-     en términos genéricos verificables; no se ha inventado ninguna cifra.
+     CV de Ignacio Gómez Vázquez — formato OXFORD
+     Single-column, cabecera centrada, serif, headings en mayúsculas
+     con divisores. Verificado con verify-ats.mjs.
      ============================================================ */
 
-  @page { margin: 0; size: A4; }
+  @page { margin: 16mm 17mm; size: A4; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 10pt;
-    line-height: 1.45;
-    color: #1a1a1a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10.5pt;
+    line-height: 1.42;
+    color: #111;
     background: #f5f5f5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .cv {
@@ -30,121 +29,59 @@
     min-height: 297mm;
     margin: 0 auto;
     background: #fff;
-    display: flex;
+    padding: 16mm 17mm;
   }
 
-  /* ---------- Columna lateral ---------- */
-  .sidebar {
-    width: 33%;
-    background: #1a1a2e;
-    color: #e8e8e8;
-    padding: 28px 20px;
-  }
+  /* ---------- Cabecera centrada ---------- */
+  .header { text-align: center; margin-bottom: 16px; }
 
-  .sidebar h1 {
-    font-size: 19pt;
-    line-height: 1.15;
-    color: #fff;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  .sidebar .role {
-    font-size: 9.5pt;
-    color: #7ec8e3;
-    font-weight: 600;
-    margin-bottom: 18px;
-  }
-
-  .sidebar h2 {
-    font-size: 9pt;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #7ec8e3;
-    font-weight: 700;
-    border-bottom: 1px solid #3a3a5e;
-    padding-bottom: 4px;
-    margin: 18px 0 8px;
-  }
-
-  .sidebar h2:first-of-type { margin-top: 0; }
-
-  .contact-item {
-    font-size: 9pt;
-    margin-bottom: 5px;
-    word-break: break-word;
-  }
-
-  .contact-item a { color: #e8e8e8; text-decoration: none; }
-
-  .badge {
-    display: inline-block;
-    background: #7ec8e3;
-    color: #1a1a2e;
-    font-size: 8pt;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 3px;
-    margin: 0 3px 3px 0;
-  }
-
-  .badge-special {
-    background: #4ade80;
-    color: #14351f;
-  }
-
-  .skill-group { margin-bottom: 8px; }
-  .skill-group h3 {
-    font-size: 8.5pt;
-    color: #b8b8d0;
-    font-weight: 600;
+  .header h1 {
+    font-size: 20pt;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #111;
     margin-bottom: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
   }
 
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 9pt;
-    margin-bottom: 4px;
-  }
-  .lang-item span:last-child { color: #9a9ab8; }
-
-  .note {
-    font-size: 7.5pt;
-    color: #8a8aa8;
+  .header .subtitle {
+    font-size: 10.5pt;
     font-style: italic;
-    margin-top: 3px;
-    line-height: 1.3;
+    color: #444;
+    margin-bottom: 8px;
   }
 
-  /* ---------- Columna principal ---------- */
-  .main {
-    width: 67%;
-    padding: 28px 26px;
+  .header .contact {
+    font-size: 9.5pt;
+    color: #333;
+    line-height: 1.5;
   }
 
-  .main h2 {
+  .header .contact a { color: #333; text-decoration: none; }
+
+  .header .sep { color: #999; margin: 0 5px; }
+
+  /* ---------- Secciones ---------- */
+  h2 {
     font-size: 11pt;
     font-weight: 700;
-    color: #1a1a2e;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 2px solid #1a1a2e;
-    padding-bottom: 3px;
-    margin: 18px 0 10px;
+    letter-spacing: 0.13em;
+    text-align: center;
+    color: #111;
+    border-top: 1.2px solid #111;
+    border-bottom: 1.2px solid #111;
+    padding: 4px 0;
+    margin: 17px 0 11px;
   }
-
-  .main h2:first-of-type { margin-top: 0; }
 
   .summary {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     line-height: 1.5;
-    color: #333;
-    margin-bottom: 4px;
+    text-align: justify;
+    color: #222;
   }
 
+  /* ---------- Entradas ---------- */
   .entry { margin-bottom: 13px; }
   .entry:last-child { margin-bottom: 0; }
 
@@ -152,317 +89,261 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 10px;
+    gap: 12px;
   }
 
   .entry-title {
-    font-size: 10pt;
+    font-size: 10.5pt;
     font-weight: 700;
-    color: #1a1a2e;
+    color: #111;
   }
 
   .entry-date {
-    font-size: 8.5pt;
-    color: #666;
+    font-size: 9.5pt;
+    color: #444;
     white-space: nowrap;
-    font-weight: 600;
+    font-variant-numeric: tabular-nums;
   }
 
   .entry-org {
-    font-size: 9pt;
-    color: #7ec8e3;
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-size: 10pt;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 3px;
   }
 
-  .entry ul { margin: 3px 0 0 15px; }
+  .entry ul { margin: 4px 0 0 17px; }
   .entry li {
-    font-size: 9pt;
+    font-size: 10pt;
     margin-bottom: 3px;
     line-height: 1.4;
   }
 
-  .todo {
-    background: #fef3c7;
-    border-left: 3px solid #f59e0b;
-    padding: 1px 5px;
-    font-size: 8.5pt;
-    color: #92400e;
-    font-weight: 600;
-    display: inline-block;
-  }
-
   .techline {
-    font-size: 8.5pt;
-    color: #555;
-    margin-top: 3px;
+    font-size: 9.5pt;
+    color: #444;
+    margin-top: 4px;
   }
-  .techline strong { color: #1a1a2e; }
+  .techline strong { color: #111; font-style: normal; }
 
+  /* ---------- Skills en flujo, no en sidebar ---------- */
+  .skills-block { margin-bottom: 6px; }
+  .skills-block .label {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #111;
+  }
+  .skills-block .list { font-size: 10pt; color: #222; }
 
-  /* Botón de impresión — no aparece en el PDF */
+  .lang-line { font-size: 10pt; margin-bottom: 3px; }
+
+  /* ---------- Discapacidad (solo versión ES) ---------- */
+  .disability {
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+  .disability strong { font-weight: 700; }
+
+  .note {
+    font-size: 8.5pt;
+    color: #666;
+    font-style: italic;
+    margin-top: 3px;
+    line-height: 1.35;
+  }
+
+  /* ---------- Botón de impresión ---------- */
   #print-btn {
     position: fixed;
     top: 18px;
     right: 18px;
     z-index: 100;
-    background: #1a1a2e;
+    background: #111;
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 10px 18px;
-    font-family: inherit;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 10pt;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,.25);
   }
-  #print-btn:hover { background: #7ec8e3; color: #1a1a2e; }
+  #print-btn:hover { background: #7ec8e3; color: #111; }
 
   @media print {
     body { background: #fff; }
-    .cv { margin: 0; width: 100%; }
-    .todo { background: #fef3c7 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cv { margin: 0; width: 100%; padding: 0; min-height: 0; }
   }
 </style>
 <style media="print">#print-btn{display:none}</style>
 </head>
 <body>
 
+<button id="print-btn" onclick="window.print()" title="Generar PDF">⬇️ Descargar PDF</button>
+
 <div class="cv">
 
-  <!-- ==================== LATERAL ==================== -->
-  <aside class="sidebar">
-
-    <h1>Ignacio<br>Gómez Vázquez</h1>
-    <div class="role">Desarrollador Junior<br>Full Stack &amp; Sistemas</div>
-
-    <h2>Contacto</h2>
-    <div class="contact-item">📍 Sevilla (España)</div>
-    <div class="contact-item">📞 (+34) 676 982 278</div>
-    <div class="contact-item">✉️ ignaciogomezvazquez2000@gmail.com</div>
-    <div class="contact-item">💻 <a href="https://github.com/Adan-Ignis">github.com/Adan-Ignis</a></div>
-    <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/ignacio-g%C3%B3mez-v%C3%A1zquez-4b192b255/">LinkedIn</a></div>
-    <div class="contact-item" style="margin-top:6px;">🟢 Disponible para <strong>remoto o presencial</strong></div>
-    <div class="contact-item">📌 Huelva · Sevilla</div>
-
-    <h2>Skills</h2>
-    <div class="skill-group">
-      <h3>Lenguajes</h3>
-      <span class="badge">Java</span><span class="badge">C++</span>
-      <span class="badge">Kotlin</span><span class="badge">Python</span>
-      <span class="badge">JavaScript</span>
+  <div class="header">
+    <h1>Ignacio Gómez Vázquez</h1>
+    <div class="subtitle">Desarrollador Junior · Full Stack &amp; Sistemas</div>
+    <div class="contact">
+      Sevilla, España<span class="sep">|</span>(+34) 676 982 278<span class="sep">|</span>ignaciogomezvazquez2000@gmail.com<br>
+      <a href="https://github.com/Adan-Ignis">github.com/Adan-Ignis</a><span class="sep">|</span><a href="https://www.linkedin.com/in/ignacio-g%C3%B3mez-v%C3%A1zquez-4b192b255/">linkedin.com/in/ignacio-gómez-vázquez</a><br>
+      Disponible para <strong>remoto o presencial</strong> · Huelva / Sevilla
     </div>
-    <div class="skill-group">
-      <h3>Web</h3>
-      <span class="badge">HTML</span><span class="badge">CSS</span>
-      <span class="badge">JavaScript</span>
+  </div>
+
+  <h2>Perfil Profesional</h2>
+  <p class="summary">
+    Técnico en Desarrollo de Aplicaciones Multiplataforma y en Sistemas
+    Microinformáticos y Redes, con prácticas en desarrollo web, automatización
+    y mantenimiento de sistemas. Experiencia real resolviendo incidencias de
+    hardware y software de forma autónoma, y en desarrollo de aplicaciones con
+    Java, Python, JavaScript y bases de datos SQL. Buscando un primer empleo
+    como desarrollador junior, en remoto o presencial.
+  </p>
+
+  <h2>Experiencia</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Prácticas — Desarrollo Web</span>
+      <span class="entry-date">Mayo 2026 – Junio 2026</span>
     </div>
-    <div class="skill-group">
-      <h3>Bases de datos</h3>
-      <span class="badge">MySQL</span><span class="badge">SQLite</span>
+    <div class="entry-org">Academia de Idiomas Carlos V · Sevilla</div>
+    <ul>
+      <li>Desarrollo de una página web completa desde cero para el centro.</li>
+      <li>Desarrollo de la interfaz y de la lógica de cliente del sitio.</li>
+      <li>Implementación completa del front-end del proyecto.</li>
+    </ul>
+    <div class="techline"><strong>Stack:</strong> HTML, CSS, JavaScript</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Prácticas Curriculares — Área de Automatización</span>
+      <span class="entry-date">Abril 2025 – Junio 2025</span>
     </div>
-    <div class="skill-group">
-      <h3>Sistemas</h3>
-      <span class="badge">Windows</span><span class="badge">Linux</span>
-      <span class="badge">Chromium OS</span><span class="badge">Hardware</span>
+    <div class="entry-org">NTTDATA · Sevilla</div>
+    <ul>
+      <li>Prácticas en el área de automatización, dentro de un equipo de mantenimiento de aplicaciones empresariales.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Prácticas — Mantenimiento de Sistemas</span>
+      <span class="entry-date">Septiembre 2019 – Diciembre 2019</span>
     </div>
-    <div class="skill-group">
-      <h3>3D &amp; VR</h3>
-      <span class="badge">Blender</span><span class="badge">Unity</span>
+    <div class="entry-org">CIEP Virgen del Pilar · Huelva</div>
+    <ul>
+      <li><strong>A cargo en solitario</strong> de todo el parque informático del centro (habitualmente atendido por dos personas), reorganizando por completo la sala de mantenimiento que los técnicos anteriores no habían logrado ordenar.</li>
+      <li><strong>Diagnóstico y reparación de 4 proyectores</strong>: identificó que el problema era suciedad acumulada y no la lámpara, evitando una compra innecesaria que el centro ya había aprobado.</li>
+      <li><strong>Análisis de causa raíz de infecciones</strong>: determinó que todos los equipos infectados compartían el mismo sistema operativo (Windows XP), y aplicó limpieza antivirus.</li>
+      <li><strong>Configuración de control de acceso por huella dactilar</strong>: puesta en marcha del lector físico y de su software asociado.</li>
+      <li><strong>Instalación de escáner de códigos de barras</strong> para inventariado de la biblioteca del centro.</li>
+      <li><strong>Recuperación de equipos</strong>: reparación por sustitución de componentes defectuosos y limpieza interna con aire comprimido en varios ordenadores.</li>
+      <li><strong>Adecuación de puesto informático en aula</strong> con canaleta protectora, previniendo tropiezos de alumnos y daños al equipamiento.</li>
+      <li>Despliegue de <strong>Chromium OS</strong> en varios equipos del centro.</li>
+      <li>Preparación y puesta a punto de <strong>10 equipos para donación</strong>; comunicó al centro el bloqueo de recursos que esta decisión provocaba.</li>
+    </ul>
+  </div>
+
+  <h2>Proyectos</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Consolidación y Deduplicación de Archivo Fotográfico</span>
+      <span class="entry-date">Proyecto personal</span>
     </div>
+    <ul>
+      <li>Unificación de <strong>todas las unidades de almacenamiento</strong> del archivo familiar en un único repositorio centralizado.</li>
+      <li><strong>Detección y resolución de duplicados</strong>: las fotografías estaban replicadas hasta 4 veces en ubicaciones distintas, con copias parciales y versiones casi idénticas del mismo momento.</li>
+      <li><strong>Normalización de metadatos</strong>: renombrado sistemático por fecha y hora de captura para garantizar unicidad y orden cronológico.</li>
+      <li>Proceso de consolidación, verificación y organización del archivo completo.</li>
+    </ul>
+    <div class="techline"><strong>Áreas:</strong> gestión de datos, deduplicación, metadatos EXIF</div>
+  </div>
 
-    <h2>Idiomas</h2>
-    <div class="lang-item"><span>Español</span><span>Nativo</span></div>
-    <div class="lang-item"><span>Inglés</span><span>B1</span></div>
+  <h2>Competencias Técnicas</h2>
+  <div class="skills-block">
+    <div><span class="label">Lenguajes:</span> <span class="list">Java, C++, Kotlin, Python, JavaScript</span></div>
+    <div><span class="label">Desarrollo Web:</span> <span class="list">HTML, CSS, JavaScript</span></div>
+    <div><span class="label">Bases de Datos:</span> <span class="list">MySQL, SQLite</span></div>
+    <div><span class="label">Sistemas:</span> <span class="list">Windows, Linux, Chromium OS, montaje y mantenimiento de hardware</span></div>
+    <div><span class="label">3D y VR:</span> <span class="list">Blender, Unity</span></div>
+  </div>
 
-    <!-- SECCIÓN SOLO VERSIÓN ESPAÑOLA -->
-    <h2>Discapacidad</h2>
-    <div class="contact-item">Certificado oficial: <strong>37%</strong></div>
-    <div class="contact-item">TEA grado I</div>
-    <div class="contact-item" style="margin-top:5px;">
-      <span class="badge badge-special">Cuota de reserva 33%</span>
+  <h2>Formación</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Curso de Desarrollo de Aplicaciones con Tecnologías Web</span>
+      <span class="entry-date">Nov 2025 – Jun 2026</span>
     </div>
-    <div class="note">Acredita el derecho a la cuota de reserva de empleo (art. 42 LGD) y a bonificaciones para la empresa.</div>
+    <div class="entry-org">Centro de Formación Integra Conocimiento e Innovación · Nivel 3 · 590 h</div>
+    <ul>
+      <li>Desarrollo web con HTML, CSS y JavaScript; programación y bases de datos con Python, MySQL y SQLite.</li>
+      <li>Accesibilidad web aplicada.</li>
+    </ul>
+  </div>
 
-  </aside>
-
-  <!-- ==================== PRINCIPAL ==================== -->
-  <main class="main">
-
-    <h2>Perfil</h2>
-    <p class="summary">
-      Técnico en Desarrollo de Aplicaciones Multiplataforma y en Sistemas
-      Microinformáticos y Redes, con prácticas en desarrollo web, automatización
-      y mantenimiento de sistemas. Experiencia real resolviendo incidencias de
-      hardware y software de forma autónoma, y en desarrollo de aplicaciones con
-      Java, Python, JavaScript y bases de datos SQL. Buscando un primer empleo
-      como desarrollador junior, en <strong>remoto o presencial</strong>.
-    </p>
-
-    <h2>Experiencia</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Prácticas — Desarrollo Web</span>
-        <span class="entry-date">Mayo 2026 – Junio 2026</span>
-      </div>
-      <div class="entry-org">Academia de Idiomas Carlos V · Sevilla</div>
-      <ul>
-        <li>Desarrollo de una página web completa desde cero para el centro.</li>
-        <li>Desarrollo de la interfaz y de la lógica de cliente del sitio.</li>
-        <li>Implementación completa del front-end del proyecto.</li>
-      </ul>
-      <div class="techline"><strong>Stack:</strong> HTML, CSS, JavaScript</div>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Curso de Programación de Realidad Virtual y Aumentada aplicables en entornos 5G</span>
+      <span class="entry-date">Sept 2025 – Oct 2025</span>
     </div>
+    <div class="entry-org">Integra Conocimiento e Innovación junto a Vodafone España · Nivel 3 · 150 h</div>
+    <ul>
+      <li>Modelado 3D con Blender y desarrollo de entornos interactivos con Unity.</li>
+      <li>Fundamentos de seguridad informática y diferencias técnicas 5G / 4G.</li>
+    </ul>
+  </div>
 
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Prácticas Curriculares — Área de Automatización</span>
-        <span class="entry-date">Abril 2025 – Junio 2025</span>
-      </div>
-      <div class="entry-org">NTTDATA · Sevilla</div>
-      <ul>
-        <li>Prácticas en el área de automatización, dentro de un equipo de mantenimiento de aplicaciones empresariales.</li>
-      </ul>
-      </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Prácticas — Mantenimiento de Sistemas</span>
-        <span class="entry-date">Septiembre 2019 – Diciembre 2019</span>
-      </div>
-      <div class="entry-org">CIEP Virgen del Pilar · Huelva</div>
-      <ul>
-        <li>
-          <strong>A cargo en solitario</strong> de todo el parque informático del centro
-          (habitualmente atendido por dos personas), reorganizando por completo la sala
-          de mantenimiento que los técnicos anteriores no habían logrado ordenar.
-        </li>
-        <li>
-          <strong>Diagnóstico y reparación de 4 proyectores</strong>: identificó que el
-          problema era suciedad acumulada y no la lámpara, evitando una compra innecesaria
-          que el centro ya había aprobado.
-        </li>
-        <li>
-          <strong>Análisis de causa raíz de infecciones</strong>: determinó que todos los
-          equipos infectados compartían el mismo sistema operativo (Windows XP), y aplicó
-          limpieza antivirus.
-        </li>
-        <li>
-          <strong>Configuración de control de acceso por huella dactilar</strong>: puesta en
-          marcha del lector físico y de su software asociado.
-        </li>
-        <li>
-          <strong>Instalación de escáner de códigos de barras</strong> para inventariado de
-          la biblioteca del centro.
-        </li>
-        <li>
-          <strong>Recuperación de equipos</strong>: reparación por sustitución de componentes
-          defectuosos y limpieza interna con aire comprimido en varios ordenadores.
-        </li>
-        <li>
-          <strong>Adecuación de puesto informático en aula</strong> con canaleta protectora,
-          previniendo tropiezos de alumnos y daños al equipamiento.
-        </li>
-        <li>
-          Despliegue de <strong>Chromium OS</strong> en varios equipos del centro.
-        </li>
-        <li>
-          Preparación y puesta a punto de <strong>10 equipos para donación</strong>;
-          comunicó al centro el bloqueo de recursos que esta decisión provocaba.
-        </li>
-      </ul>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Multiplataforma</span>
+      <span class="entry-date">Sept 2020 – Dic 2024</span>
     </div>
+    <div class="entry-org">San José SSCC · Sevilla</div>
+    <ul>
+      <li>Programación en C++, Java y Kotlin; bases de datos MySQL; desarrollo web con HTML, CSS y JavaScript.</li>
+    </ul>
+  </div>
 
-    <h2>Proyectos</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Consolidación y Deduplicación de Archivo Fotográfico</span>
-        <span class="entry-date">Proyecto personal</span>
-      </div>
-      <ul>
-        <li>
-          Unificación de <strong>todas las unidades de almacenamiento</strong> del archivo
-          familiar en un único repositorio centralizado.
-        </li>
-        <li>
-          <strong>Detección y resolución de duplicados</strong>: las fotografías estaban
-          replicadas hasta 4 veces en ubicaciones distintas, con copias parciales y
-          versiones casi idénticas del mismo momento.
-        </li>
-        <li>
-          <strong>Normalización de metadatos</strong>: renombrado sistemático por fecha y
-          hora de captura para garantizar unicidad y orden cronológico.
-        </li>
-        <li>Proceso de consolidación, verificación y organización del archivo completo.</li>
-      </ul>
-      <div class="techline"><strong>Áreas:</strong> gestión de datos, deduplicación, metadatos EXIF</div>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Grado Medio en Sistemas Microinformáticos y Redes</span>
+      <span class="entry-date">Sept 2015 – Dic 2019</span>
     </div>
+    <div class="entry-org">IES San Sebastián · Huelva</div>
+    <ul>
+      <li>Montaje y mantenimiento de equipos, instalación de sistemas operativos y configuración.</li>
+      <li>Instalación, configuración, mantenimiento y administración de redes.</li>
+    </ul>
+  </div>
 
-    <h2>Formación</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Curso de Desarrollo de Aplicaciones con Tecnologías Web</span>
-        <span class="entry-date">Nov 2025 – Jun 2026</span>
-      </div>
-      <div class="entry-org">Centro de Formación Integra Conocimiento e Innovación · Nivel 3 · 590 h</div>
-      <ul>
-        <li>Desarrollo web con HTML, CSS y JavaScript; programación y bases de datos con Python, MySQL y SQLite.</li>
-        <li>Accesibilidad web aplicada.</li>
-      </ul>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Curso de Prevención de Riesgos Laborales</span>
+      <span class="entry-date">Mar 2026 – Abr 2026</span>
     </div>
+    <div class="entry-org">Integra Conocimiento e Innovación · 30 h</div>
+  </div>
 
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Curso de Programación de Realidad Virtual y Aumentada aplicables en entornos 5G</span>
-        <span class="entry-date">Sept 2025 – Oct 2025</span>
-      </div>
-      <div class="entry-org">Integra Conocimiento e Innovación junto a Vodafone España · Nivel 3 · 150 h</div>
-      <ul>
-        <li>Modelado 3D con Blender y desarrollo de entornos interactivos con Unity.</li>
-        <li>Fundamentos de seguridad informática y diferencias técnicas 5G / 4G.</li>
-      </ul>
-    </div>
+  <h2>Idiomas</h2>
+  <div class="lang-line"><strong>Español:</strong> Nativo</div>
+  <div class="lang-line"><strong>Inglés:</strong> B1</div>
 
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Curso de Prevención de Riesgos Laborales</span>
-        <span class="entry-date">Mar 2026 – Abr 2026</span>
-      </div>
-      <div class="entry-org">Integra Conocimiento e Innovación · 30 h</div>
-    </div>
+  <h2>Discapacidad</h2>
+  <div class="disability">
+    Certificado oficial de discapacidad: <strong>37%</strong> · TEA grado I<br>
+    Acredita el derecho a la <strong>cuota de reserva de empleo del 33%</strong> (art. 42 LGD)
+    y a bonificaciones en la Seguridad Social para la empresa.
+  </div>
 
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Multiplataforma</span>
-        <span class="entry-date">Sept 2020 – Dic 2024</span>
-      </div>
-      <div class="entry-org">San José SSCC · Sevilla</div>
-      <ul>
-        <li>Programación en C++, Java y Kotlin; bases de datos MySQL; desarrollo web con HTML, CSS y JavaScript.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Grado Medio en Sistemas Microinformáticos y Redes</span>
-        <span class="entry-date">Sept 2015 – Dic 2019</span>
-      </div>
-      <div class="entry-org">IES San Sebastián · Huelva</div>
-      <ul>
-        <li>Montaje y mantenimiento de equipos, instalación de sistemas operativos y configuración.</li>
-        <li>Instalación, configuración, mantenimiento y administración de redes.</li>
-      </ul>
-    </div>
-
-  </main>
 </div>
-
-<button id="print-btn" onclick="window.print()" title="Generar PDF">⬇️ Descargar PDF</button>
 
 </body>
 </html>
